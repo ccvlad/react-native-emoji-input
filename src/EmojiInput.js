@@ -497,7 +497,7 @@ class EmojiInput extends React.PureComponent {
             <View
               style={[
                 styles.footerContainer,
-                { backgroundColor: this.props.categoryBackgroundColor }
+                { ...this.props.categoryContainerStyle }
               ]}
             >
               {_.drop(
@@ -592,9 +592,9 @@ EmojiInput.defaultProps = {
 
   showCategoryTab: true,
   showCategoryTitleInSearchResults: false,
+  categoryContainerStyle: {},
   categoryUnhighlightedColor: "lightgray",
   categoryHighlightColor: "black",
-  categoryBackgroundColor: "white",
   enableSearch: true,
 
   enableFrequentlyUsedEmoji: true,
@@ -623,9 +623,9 @@ EmojiInput.propTypes = {
   showCategoryTab: PropTypes.bool,
   showCategoryTitleInSearchResults: PropTypes.bool,
   categoryFontSize: PropTypes.number,
+  categoryContainerStyle: PropTypes.object,
   categoryUnhighlightedColor: PropTypes.string,
   categoryHighlightColor: PropTypes.string,
-  categoryBackgroundColor: PropTypes.string,
   categorySize: PropTypes.number,
   categoryLabelHeight: PropTypes.number,
   enableSearch: PropTypes.bool,
